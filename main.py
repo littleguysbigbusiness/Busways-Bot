@@ -3,7 +3,7 @@ import requests
 import os
 from discord.ext import commands, tasks
 from datetime import datetime
-
+from keep_alive import keep_alive
 # --- 1. SETUP ---
 intents = discord.Intents.default()
 bot = commands.Bot(command_prefix="!", intents=intents)
