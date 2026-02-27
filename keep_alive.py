@@ -6,11 +6,11 @@ app = Flask('')
 
 @app.route('/')
 def home():
-    return "I am alive!"
+    return "Bot is awake!"
 
 def run():
-    # Render provides the port via an environment variable called 'PORT'
-    # We use 10000 as a backup if 'PORT' isn't found
+    # Render automatically provides a 'PORT' variable. 
+    # If it's missing, it uses 10000 as a backup.
     port = int(os.environ.get("PORT", 10000))
     app.run(host='0.0.0.0', port=port)
 
